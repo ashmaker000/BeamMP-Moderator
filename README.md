@@ -17,7 +17,9 @@ Server-side BeamMP moderation plugin for abuse controls:
 - optional client companion reset lock
 - configurable profanity/phrase filter for chat
 - live `/mod get`, `/mod set`, `/mod limits`, `/mod reload`, `/mod sync`, `/mod discordtest`, and `/mod server` commands
+<img width="418" height="89" alt="Screenshot 2026-06-26 083134" src="https://github.com/user-attachments/assets/51a98204-3f3b-42bf-a5ba-587a0fb788ab" />
 
+<img width="337" height="82" alt="Screenshot 2026-06-26 091449" src="https://github.com/user-attachments/assets/1cd26c0b-3437-4123-8bfe-8cf3ecea4877" />
 
 ## Client Companion
 
