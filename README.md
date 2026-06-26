@@ -18,22 +18,54 @@ Server-side BeamMP moderation plugin for abuse controls:
 - configurable profanity/phrase filter for chat
 - live `/mod get`, `/mod set`, `/mod limits`, `/mod reload`, `/mod sync`, `/mod discordtest`, and `/mod server` commands
 
-## Install
 
-Copy the `Moderator` folder into your BeamMP server resources:
+## Client Companion
 
-```text
-Resources/Server/Moderator/config.lua
-Resources/Server/Moderator/main.lua
-```
+The server plugin works without a client mod. The optional client companion can block reset/recover inputs during mutes and spawn locks.
 
-If you keep this repository layout, copy from:
+Install the client files as a BeamNG/BeamMP client mod:
 
 ```text
-Server/Moderator
+Client/lua/ge/extensions/moderatorClient.lua
+Client/scripts/moderator/modScript.lua
 ```
 
-Restart the server after installing.
+The server sends `moderator_setState` events when a punishment should apply. Players need the client companion installed for input blocking to work; server-side chat/spawn/edit enforcement still works without it.
+
+### Installation
+
+1. **Download the release**
+
+   * Go to the **Releases** page.
+   * Download the latest `.zip` file.
+
+2. **Extract the files**
+
+   * Unzip the download.
+   * You will get two folders:
+
+     * `Client`
+     * `Server`
+
+3. **Install the client files**
+
+   * Open the extracted **Client** folder.
+   * Inside it is a `.zip` file.
+   * Upload that `.zip` into your server’s **client mods folder**.
+
+4. **Install the server files**
+
+   * Open the extracted **Server** folder.
+   * Inside is a folder for the game mode (e.g. `CarHunt`, `Tag`, `PropHunt` etc.).
+   * On your server, open the main **server folder**.
+   * Create a folder for that game mode (for example: `CarHunt`, `Tag`, `PropHunt`).
+   * Copy **all files** from the extracted game mode folder into the matching folder you just created on the server.
+
+5. **Restart the server**
+
+   * Restart your BeamMP server.
+   * The game mode should now be active.
+
 
 ## Configure
 
@@ -255,19 +287,6 @@ GET /config/:serverId
 ```
 
 See [CENTRAL_API.md](CENTRAL_API.md) for the concrete API contract.
-
-## Client Companion
-
-The server plugin works without a client mod. The optional client companion can block reset/recover inputs during mutes and spawn locks.
-
-Install the client files as a BeamNG/BeamMP client mod:
-
-```text
-Client/lua/ge/extensions/moderatorClient.lua
-Client/scripts/moderator/modScript.lua
-```
-
-The server sends `moderator_setState` events when a punishment should apply. Players need the client companion installed for input blocking to work; server-side chat/spawn/edit enforcement still works without it.
 
 ## Event Limits
 
