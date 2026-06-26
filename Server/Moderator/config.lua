@@ -260,7 +260,7 @@ ModeratorConfig = {
 
   discord = {
     enabled = true,
-    webhookUrl = "https://discord.com/api/webhooks/1519685171304071259/nHfdwk9pq8qBo5-1I4DyQ0xfrYFRicJqzFAYeQUQftFYV9Pme1iK9kH7pJ2OBvSDb1xI",
+    webhookUrl = "WEBHOOK_URL_HERE",
     useCurl = true,
     username = "BeamMP Moderator",
     minScoreToSend = 25,
