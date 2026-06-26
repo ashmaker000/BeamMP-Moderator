@@ -149,6 +149,7 @@ local defaultConfig = {
       "s h i t",
       "b!tch",
       "c*nt",
+      "cunt",
       "n1gga",
       "n!gga",
       "k y s"
@@ -258,7 +259,7 @@ local defaultConfig = {
 
   discord = {
     enabled = false,
-    webhookUrl = "",
+    webhookUrl = "WEBHOOK_URL_HERE",
     useCurl = false,
     username = "BeamMP Moderator",
     minScoreToSend = 25,
